@@ -1110,6 +1110,7 @@ header .mega-menu .links li a i{
 @media (max-width:767px) {
     .events .subscribe form{
         width: 100%;
+    flex-direction: column;
     }
 }
 .events .subscribe form input[type="email"]{
@@ -1137,6 +1138,7 @@ header .mega-menu .links li a i{
     font-weight: bold;
     cursor: pointer;
     transition: var(--main-transition-dur);
+    max-width:100%;
 }
 .events .subscribe form input[type="submit"]:hover{
     background-color: var(--main-color-alt);
