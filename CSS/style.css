@@ -753,6 +753,8 @@ header .mega-menu .links li a i{
     width: calc(100% - 60px);
     transition: var(--main-transition-dur);
     border-radius: 10px;
+    filter: grayscale(100%);
+    opacity: 0.5;
 }
 @media (max-width:768px) {
     .team .box .data img{
@@ -760,7 +762,8 @@ header .mega-menu .links li a i{
     }
 }
 .team .box:hover .data img{
-    filter: grayscale(100%);
+    filter: grayscale(0%);
+    opacity: 1;
 }
 .team .box .data .social{
     display: flex;
@@ -801,14 +804,14 @@ header .mega-menu .links li a i{
 .team .box .about h3{
     margin: 10px 0 0;
     font-size: 22px;
-    color: var(--main-color);
+    color: #777;
     transition: var(--main-transition-dur);
 }
 .team .box .about p{
     margin: 10px 0 25px;
 }
 .team .box:hover .about h3{
-    color: #777;
+    color: var(--main-color);
 }
 /* end team */
 /* start services */
