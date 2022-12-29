@@ -1527,6 +1527,8 @@ footer .container{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
     gap: 40px;
+    padding: 20px 0 25px 0;
+    border-bottom: 1px solid #444;
 }
 @media (max-width:767px) {
     footer .container{
@@ -1651,13 +1653,43 @@ footer .copyright{
     padding: 25px 0 40px;
     text-align: center;
     color: white;
-    margin: 50px 0 0px;
-    border-top: 1px solid #444;
+    margin: 30px auto 0px;
     font-size: 25px;
     position: relative;
+    width: 280px;
+    animation: control-width 4s 0.5s steps(17) both infinite ;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes control-width {
+    from{
+        width: 0;
+    }
+    to{
+        width: 280px;
+    }
 }
 footer .copyright lord-icon{
     position: absolute;
     top: 15px;
+}
+footer .copyright::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    right: 0px;
+    top: 42%;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    height: 30px;
+    animation: blank 0.5s infinite linear;
+}
+@keyframes blank {
+    from{
+    background-color: var(--main-color);
+    }
+    to{
+        background-color: transparent;
+    }
 }
 /* end footer */
